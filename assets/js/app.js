@@ -122,7 +122,7 @@
     // --- Events
     els.btnConfig.addEventListener("click", () => {
         const currentBase = (window.CONFIG && window.CONFIG.API_BASE) || "";
-        const base = prompt("API Base (ex.: http://localhost:8000 ou http://localhost:8000/comicsinventory/api)", currentBase);
+        const base = prompt("API Base (ex.: https://jo4tul2r6g477hsmq3l63j52by0tufeb.lambda-url.sa-east-1.on.aws ou https://jo4tul2r6g477hsmq3l63j52by0tufeb.lambda-url.sa-east-1.on.aws/comicsinventory/api)", currentBase);
         if (base !== null) window.CONFIG.API_BASE = base;
         const existingKey = store.get(S.API_KEY, "");
         const apiKey = prompt("API Key (para /auth/token)", existingKey);
